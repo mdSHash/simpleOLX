@@ -1,0 +1,19 @@
+.content{
+    text-align:center;
+    height:450px;
+}
+nav{
+    z-index: 2;
+}
+li:hover{
+    background-color: darkgray;
+    border-radius: 8px;
+}
+li{
+    font-size: 19px;
+}
+.main-form{
+    width: 40%;
+    margin-top: 6pc;
+    display:inline-block;
+}

@@ -1,0 +1,153 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--Bootstrap-->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <!--font awesome-->
+    <link rel="stylesheet" href="/assets/font-awesome-4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@("fortawesome")/fontawesome-free@5.15.3/css/fontawesome.min.css">
+    <!--custom css-->
+    <link rel="stylesheet" href="/assets/css/index.css">
+    <title>Home</title>
+</head>
+<body>
+    <div class="nav-container">
+        <!--start nav-->
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="#">Home <i class="fa fa-home"></i><span class="sr-only"></span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/Views/Order">Order</a>
+                    </li>
+                </ul>
+                <form class="form-inline my-2 my-lg-0 search" onsubmit="return false">
+                    <ul class="navbar-nav mr-auto">
+                        <li class="nav-item dropdown active">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <i class="fa fa-user"></i>
+                            </a>
+                            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <a class="dropdown-item" href="#"><i class="fa fa-sign-in"></i> login</a>
+                                <div class="dropdown-divider"></div>
+                                <a class="dropdown-item" href="#"><i class="fa fa-sign-out"></i> logout</a>
+                            </div>
+                        </li>
+                    </ul>
+                    <input class="form-control mr-sm-2" type="search" id="val" placeholder="Search" aria-label="Search">
+                    <button class="btn btn-outline-success my-2 my-sm-0" id="search" type="submit">Search</button>
+                </form>
+            </div>
+        </nav>
+        <!--end nav-->
+        <div class="content">
+            <div id="staff-wrapper">
+                <div class="staff__block">
+                    <div class="card slow_zoom">
+                        <div class="text_holder">
+                            <div class="text_holder_outer">
+                                <div class="text_holder_inner">
+                                    <h2 class="title">
+                                        Food
+                                    </h2>
+                                    <span class="designation">Food Options</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="icons_holder"></div>
+                        <div class="image_shader"></div>
+                        <div class="staff_image_holder">
+                            <span class="image">
+                                <img src="/assets/img/download.jpg" class="attachment-portfolio-square wp-post-image" alt="Julia">
+                            </span>
+                        </div>
+                    </div>
+                    <div class="card slow_zoom">
+                        <div class="text_holder">
+                            <div class="text_holder_outer">
+                                <div class="text_holder_inner">
+                                    <h2 class="title">
+                                        Drinks
+                                    </h2>
+                                    <span class="designation">Drinks Options</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="icons_holder"></div>
+                        <div class="image_shader"></div>
+                        <div class="staff_image_holder">
+                            <span class="image">
+                                <img width="570" height="570" src="/assets/img/drinks.jpg" alt="David">
+                            </span>
+                        </div>
+                    </div>
+                    <div class="card slow_zoom">
+                        <div class="text_holder">
+                            <div class="text_holder_outer">
+                                <div class="text_holder_inner">
+                                    <h2 class="title">
+                                        Clothes
+                                    </h2>
+                                    <span class="designation">Clothes Options</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="icons_holder"></div>
+                        <div class="image_shader"></div>
+                        <div class="staff_image_holder">
+                            <span class="image">
+                                <img width="570" height="570" src="/assets/img/clothes.jpeg" alt="Blake">
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--sweet alert-->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <!--Jquery-->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>        <!--Bootstrap-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+
+    <script>
+        $('#search').click(function(){
+                var search = $('#val').val();
+                $.ajax({
+                    url: "/APIs/search",
+                    method: "POST",
+                    data: { token: search },
+                    success: function (response) {
+                        if (response.code == 0) {
+                            swal.fire("Something went wrong", "wrong username or password", "error");
+                        }
+                        else {
+                            swal.fire("Your Order Info", `<div><h3>` + response.Service + `</h3></div>`+
+                                `<div><h3>` + response.Feature + `</h3></div>` +
+                                `<div><h3>` + response.Ordertype + `</h3></div>` +
+                                `<div><h3>` + response.quantity + `</h3></div>` +
+                                `<div><h3>` + response.Orderdate + `</h3></div>` +
+                                `<div><h3>` + response.ContactNum + `</h3></div>` , "success");
+                        }
+                    }, error: function (XMLHttpRequest, textStatus, errorThrown) {
+                        console.log(JSON.stringify(XMLHttpRequest));
+                        console.log("text " + textStatus);
+                        console.log("error " + errorThrown);
+                    }
+                });
+        });
+    </script>
+</body>
+</html>
