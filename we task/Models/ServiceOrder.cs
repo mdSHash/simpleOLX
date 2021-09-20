@@ -17,7 +17,7 @@ namespace we_task.Models
         public int id { get; set; }
         public int ClientID { get; set; }
         public int ServiceID { get; set; }
-        public int FeatureID { get; set; }
+        public string FeatureID { get; set; }
         public string Token { get; set; }
         public System.DateTime OrderDate { get; set; }
         public string Ordertype { get; set; }

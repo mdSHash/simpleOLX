@@ -56,9 +56,9 @@
             <div class="form-group">
                 <label for="exampleFormControlInput1">Order Type</label>
                 <select class="form-control" id="OrderType" required>
-                    <option>T</option>
-                    <option>S</option>
-                    <option>F</option>
+                    <option value="T">T</option>
+                    <option value="S">S</option>
+                    <option value="F">F</option>
                 </select>
             </div>
             <div class="form-group">
@@ -89,20 +89,17 @@
                     <label for="Order Features">Features</label>
                 </div>
                 <div id="mydiv">
-                    <div class="form-check form-check-inline">
-                        <input class="form-check-input" type="checkbox" name="test" id="inlineCheckbox1" value="option1">
-                        <label class="form-check-label" for="inlineCheckbox1">1</label>
-                    </div>
+
                 </div>
             </div>
             <div class="form-group">
                 <label for="exampleFormControlTextarea1">quantity</label>
                 <select class="form-control" id="quantity" required>
-                    <option>1</option>
-                    <option>2</option>
-                    <option>3</option>
-                    <option>4</option>
-                    <option>5</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
                 </select>
             </div>
             <div class="form-group">
@@ -133,7 +130,7 @@
                     $('#mydiv').html('');
                     for (var i = 0; i < response.length; i++) {
                         $("#mydiv").append(`<div class="form-check form-check-inline">
-                            <input class="form-check-input" type="checkbox" name="test" id="inlineCheckbox1" value="`+ response[i].id + `">
+                            <input class="form-check-input" type="checkbox" name="`+ response[i].id + `" id="inlineCheckbox1" value="`+ response[i].id + `">
                             <label class="form-check-label" for="inlineCheckbox1">`+ response[i].info + `</label>
                         </div>
                     </div>`)
@@ -147,16 +144,44 @@
         });
         function sub() {
             var serve = $("#Services").val();
+            var names = [];
             if (serve == 0) {
                 swal.fire("Erorr", "Please Select a Service!", "error");
             }
             else if (serve != 0) {
-                var names = [];
                 $('input:checked').each(function () {
                     names.push(this.name);
                 });
                 if (names.length == 0) {
                     swal.fire('Error', 'Please select at least one feature', 'error');
+                }
+                else {
+                    var OrderType = $(`#OrderType`).val();
+                    var Services = $(`#Services`).val();
+                    var quantity = $(`#quantity`).val();
+                    var date = $(`#date`).val();
+                    var count = 0;
+                        $.ajax({
+                            url: "/APIs/Order",
+                            async: false,
+                            method: "POST",
+                            data: { type: OrderType, service: Services, Quanttity: quantity, date: date, Fid: names },
+                            success: function (response) {
+                                var tokens = [];
+                                var x = ""
+                                tokens.push(response.token);
+                                if (response.code == 1 ){
+                                    for (var i1 = 0; i1 < response.length; i1++) {
+                                        x = x + `<div>` + response.tokens[i1] + `</div>`;
+                                    }
+                                    swal.fire("your order has been placed!!", "your order numbers are" + x, "success");
+                                }
+                            }, error: function (XMLHttpRequest, textStatus, errorThrown) {
+                                console.log(JSON.stringify(XMLHttpRequest));
+                                console.log("text " + textStatus);
+                                console.log("error " + errorThrown);
+                            }
+                        });
                 }
             }
         }

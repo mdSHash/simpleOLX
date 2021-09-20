@@ -8,6 +8,26 @@ namespace we_task
     public class Helpers
     {
         taskEntities db = new taskEntities();
+        public string Token()
+        {
+            Random ran = new Random();
+            String b = "1234567890";
+            int length = 5;
+            String random = "";
+
+            for (int i = 1; i < length; i++)
+            {
+                int a = ran.Next(64);
+                random += b.ElementAt(a);
+            }
+            ServiceOrder u = db.ServiceOrders.Where(o => o.Token == random).FirstOrDefault();
+            if (u != null)
+            {
+                Token();
+            }
+            return random;
+        }
+
         public bool ViewAuthenication(int id, string token)
         {
             try

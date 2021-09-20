@@ -124,7 +124,7 @@
 
     <script>
         $('#search').click(function(){
-                var search = $('#val').val();
+            var search = $('#val').val();
                 $.ajax({
                     url: "/APIs/search",
                     method: "POST",
@@ -134,12 +134,13 @@
                             swal.fire("Something went wrong", "wrong username or password", "error");
                         }
                         else {
-                            swal.fire("Your Order Info", `<div><h3>` + response.Service + `</h3></div>`+
-                                `<div><h3>` + response.Feature + `</h3></div>` +
-                                `<div><h3>` + response.Ordertype + `</h3></div>` +
-                                `<div><h3>` + response.quantity + `</h3></div>` +
-                                `<div><h3>` + response.Orderdate + `</h3></div>` +
-                                `<div><h3>` + response.ContactNum + `</h3></div>` , "success");
+                            swal.fire("Your Order Info",
+                                `<div><h3>Searvice: ` + response.Service + `</h3></div>` +
+                                `<div><h3>Feature: ` + response.Feature + `</h3></div>` +
+                                `<div><h3> Order Type: ` + response.Ordertype + `</h3></div>` +
+                                `<div><h3>Order Quantity: ` + response.quantity + `</h3></div>` +
+                                `<div><h3>Order Date: ` + response.OrderDate+ `</h3></div>` +
+                                `<div><h3>Contact Number: ` + response.ContactNum + `</h3></div>` , "success");
                         }
                     }, error: function (XMLHttpRequest, textStatus, errorThrown) {
                         console.log(JSON.stringify(XMLHttpRequest));

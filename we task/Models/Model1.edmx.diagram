@@ -5,16 +5,17 @@
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
       <Diagram DiagramId="40e649beb8764e62a72dfe191739e0ae" Name="Diagram1" ZoomLevel="112">
-        <EntityTypeShape EntityType="taskModel.Access" Width="1.5" PointX="3.125" PointY="4.625" IsExpanded="true" />
-        <EntityTypeShape EntityType="taskModel.Client" Width="1.5" PointX="0.875" PointY="4.125" IsExpanded="true" />
-        <EntityTypeShape EntityType="taskModel.Feature" PointX="3" PointY="1.375" Width="1.5" IsExpanded="true" />
-        <EntityTypeShape EntityType="taskModel.ServiceOrder" Width="1.5" PointX="5.25" PointY="1.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="taskModel.Service" Width="1.5" PointX="0.75" PointY="1.5" IsExpanded="true" />
-        <AssociationConnector Association="taskModel.FK_Access_Clients" ManuallyRouted="false" />
-        <AssociationConnector Association="taskModel.FK_ServiceOrders_Clients" ManuallyRouted="false" />
-        <AssociationConnector ManuallyRouted="false" Association="taskModel.FK_Features_Services" />
-        <AssociationConnector ManuallyRouted="false" Association="taskModel.FK_ServiceOrders_Features" />
-        <AssociationConnector Association="taskModel.FK_ServiceOrders_Services" ManuallyRouted="false" />
+        <EntityTypeShape EntityType="taskModel.Access" Width="1.5" PointX="5.25" PointY="5.5" />
+        <EntityTypeShape EntityType="taskModel.Client" Width="1.5" PointX="3" PointY="5.25" />
+        <EntityTypeShape EntityType="taskModel.Feature" Width="1.5" PointX="3" PointY="1.625" />
+        <EntityTypeShape EntityType="taskModel.ServiceOrder" Width="1.5" PointX="5.25" PointY="1" />
+        <EntityTypeShape EntityType="taskModel.Service" Width="1.5" PointX="0.75" PointY="1.75" />
+        <EntityTypeShape EntityType="taskModel.sysdiagram" Width="1.5" PointX="7.75" PointY="0.75" />
+        <AssociationConnector Association="taskModel.FK_Access_Clients" />
+        <AssociationConnector Association="taskModel.FK_ServiceOrders_Clients" />
+        <AssociationConnector Association="taskModel.FK_Features_Services" />
+        <AssociationConnector Association="taskModel.FK_ServiceOrders_Features" />
+        <AssociationConnector Association="taskModel.FK_ServiceOrders_Services" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

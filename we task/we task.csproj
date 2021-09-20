@@ -137,6 +137,7 @@
     <Content Include="assets\font-awesome-4.7.0\fonts\fontawesome-webfont.svg" />
     <Content Include="assets\font-awesome-4.7.0\HELP-US-OUT.txt" />
     <Content Include="assets\img\clothes.jpeg" />
+    <Content Include="assets\img\contact_icon.png" />
     <Content Include="assets\img\download.jpg" />
     <Content Include="assets\img\drinks.jpg" />
     <Content Include="assets\img\login.png" />
@@ -193,6 +194,9 @@
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\ServiceOrder.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\sysdiagram.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />

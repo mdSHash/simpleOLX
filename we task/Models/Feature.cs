@@ -20,7 +20,7 @@ namespace we_task.Models
             this.ServiceOrders = new HashSet<ServiceOrder>();
         }
     
-        public int id { get; set; }
+        public string id { get; set; }
         public int ServicesID { get; set; }
         public string info { get; set; }
     

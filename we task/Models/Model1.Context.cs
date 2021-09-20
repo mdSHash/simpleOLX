@@ -30,5 +30,6 @@ namespace we_task.Models
         public virtual DbSet<Feature> Features { get; set; }
         public virtual DbSet<ServiceOrder> ServiceOrders { get; set; }
         public virtual DbSet<Service> Services { get; set; }
+        public virtual DbSet<sysdiagram> sysdiagrams { get; set; }
     }
 }
